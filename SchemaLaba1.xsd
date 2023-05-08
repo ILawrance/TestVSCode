@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+
+    <xs:element name="CargoCars">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="CargoCar" type="Car" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="Car">
+        <xs:sequence>
+            <xs:element name="Model" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
+            <xs:element name="Number" maxOccurs="1" minOccurs="1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:int">
+                        <xs:minInclusive value="0"></xs:minInclusive>
+                        <xs:maxInclusive value="999999"></xs:maxInclusive>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Driver" type="Person" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Person">
+        <xs:sequence>
+            <xs:element name="FIO" maxOccurs="1" minOccurs="1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:length value="3"></xs:length>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="DateOfStart" type="xs:date" maxOccurs="unbounded"> </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
