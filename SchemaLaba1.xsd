@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
 
     <xs:element name="CargoCars">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="CargoCar" type="Car" maxOccurs="unbounded"></xs:element>
+                <xs:element name="CargoCar" type="Car" maxOccurs="unbounded"> </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
     <xs:complexType name="Car">
         <xs:sequence>
-            <xs:element name="Model" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
             <xs:element name="Number" maxOccurs="1" minOccurs="1">
                 <xs:simpleType>
                     <xs:restriction base="xs:int">
@@ -24,7 +22,16 @@
             </xs:element>
             <xs:element name="Driver" type="Person" maxOccurs="unbounded"></xs:element>
         </xs:sequence>
+        <xs:attribute ref="Model" use="optional"></xs:attribute>
     </xs:complexType>
+
+    <xs:attribute name="Model" default="Lada">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:maxLength value="10"></xs:maxLength>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
 
     <xs:complexType name="Person">
         <xs:sequence>
