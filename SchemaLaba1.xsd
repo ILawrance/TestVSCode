@@ -5,14 +5,14 @@
     <xs:element name="CargoCars">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="CargoCar" type="Car" maxOccurs="unbounded"> </xs:element>
+                <xs:element name="CargoCar" type="Car" maxOccurs="unbounded"></xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
     <xs:complexType name="Car">
         <xs:sequence>
-            <xs:element name="Number" maxOccurs="1" minOccurs="1">
+            <xs:element name="Number">
                 <xs:simpleType>
                     <xs:restriction base="xs:int">
                         <xs:minInclusive value="0"></xs:minInclusive>
@@ -20,7 +20,7 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
-            <xs:element name="Driver" type="Person" maxOccurs="unbounded"></xs:element>
+            <xs:element name="Drivers" type="Drivers" minOccurs="0"></xs:element>
         </xs:sequence>
         <xs:attribute ref="Model" use="optional"></xs:attribute>
     </xs:complexType>
@@ -33,16 +33,18 @@
         </xs:simpleType>
     </xs:attribute>
 
+    <xs:complexType name="Drivers">
+        <xs:sequence>
+            <xs:element name="Driver" type="Person" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
     <xs:complexType name="Person">
         <xs:sequence>
-            <xs:element name="FIO" maxOccurs="1" minOccurs="1">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:length value="3"></xs:length>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element name="DateOfStart" type="xs:date" maxOccurs="unbounded"> </xs:element>
+            <xs:element name="First_Name" type="xs:string"></xs:element>
+            <xs:element name="Second_Name" type="xs:string"></xs:element>
+            <xs:element name="Otchestvo" type="xs:string" minOccurs="0"></xs:element>
+            <xs:element name="DateOfStart" type="xs:date"> </xs:element>
         </xs:sequence>
     </xs:complexType>
 

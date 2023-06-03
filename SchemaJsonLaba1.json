@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Лаба 1.2 вариант 2",
+    "type": "object",
+    "required": ["CargoCars"],
+
+    "properties": {
+      "CargoCars": {
+        "type": "object",
+        "required": ["CargoCar"],
+
+        "properties": {
+          "CargoCar": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["Number"],
+
+              "properties": {
+                "Number": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 999999
+                },
+                "Drivers": {
+                  "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                          "First_Name": {
+                            "type": "string"
+                          },
+                          "Second_Name": {
+                            "type": "string"
+                          },
+                          "Otchestvo": {
+                            "type": "string"
+                          },
+                          "DateOfStart": {
+                            "type": "string",
+                            "format": "date"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }

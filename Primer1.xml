@@ -4,17 +4,24 @@
 
     <CargoCar Model="BMW">
         <Number>213</Number>
-        <Driver>
-            <FIO>AAE</FIO>
+        <Drivers>
+            <Driver>
+            <First_Name>Egor</First_Name>
+            <Second_Name>Egorov</Second_Name>
             <DateOfStart>2002-02-01</DateOfStart>
-        </Driver>
+            </Driver>
+        </Drivers>
     </CargoCar>
 
     <CargoCar>
         <Number>43276</Number>
-        <Driver>
-            <FIO>DDD</FIO>
+        <Drivers>
+            <Driver>
+            <First_Name>Egor</First_Name>
+            <Second_Name>Egorov</Second_Name>
+            <Otchestvo>Egorovich</Otchestvo>
             <DateOfStart>2022-05-12</DateOfStart>
-        </Driver>
+            </Driver>
+        </Drivers>
     </CargoCar>
 </CargoCars>
