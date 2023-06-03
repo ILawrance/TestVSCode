@@ -1,28 +1,32 @@
-{   "$schema": "SchemaJsonLaba1.json",
-    "CargoCars": {
-    "CargoCar": [{
-        "Number": 89,
-        "Drivers": [{
-                "First_Name": "Alex",
-                "Second_Name": "Egorov",
-                "DateOfStart": "2022-02-22"
-            }]
-        },
-
+{
+  "$schema": "SchemaJsonLaba1.json",
+  "CargoCar": [
+    {
+      "Number": 89,
+      "Drivers": [
         {
-        "Number": 85,
-        "Drivers": [{
-            
-                "First_Name": "Andrey",
-                "Second_Name": "Egorov",
-                "Otchestvo": "Egorocich",
-                "DateOfStart": "2202-06-02"
-            },
-            {
-                "First_Name": "Egor",
-                "Second_Name": "Egorov",
-                "DateOfStart": "2023-04-13"
-            }]
-        }]
+          "First_Name": "Alex",
+          "Second_Name": "Egorov",
+          "DateOfStart": "2022-02-22"
+        }
+      ]
+    },
+
+    {
+      "Number": 85,
+      "Drivers": [
+        {
+          "First_Name": "Andrey",
+          "Second_Name": "Egorov",
+          "Otchestvo": "Egorocich",
+          "DateOfStart": "2202-06-02"
+        },
+        {
+          "First_Name": "Egor",
+          "Second_Name": "Egorov",
+          "DateOfStart": "2023-04-13"
+        }
+      ]
     }
+  ]
 }
